@@ -1,0 +1,123 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos dos Fieldsets e Legends */
+form fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+form legend {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Estilos da Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos dos Labels e Inputs */
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #5cb85c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 184, 92, 0.5);
+}
+
+/* Estilos dos Botões */
+form .button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+form button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 48%;
+    font-size: 1em;
+}
+
+form button[type="reset"] {
+    background-color: #d9534f;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+/* Estilos de Acessibilidade */
+form input[aria-required="true"], form select[aria-required="true"], form textarea[aria-required="true"] {
+    border-left: 4px solid #d9534f;
+}
+
+form input[aria-invalid="true"], form select[aria-invalid="true"], form textarea[aria-invalid="true"] {
+    border-left: 4px solid #d9534f;
+    background-color: #f2dede;
+}
+
+form input[aria-invalid="true"]:focus, form select[aria-invalid="true"]:focus, form textarea[aria-invalid="true"]:focus {
+    border-color: #d9534f;
+    box-shadow: 0 0 5px rgba(217, 83, 79, 0.5);
+}
